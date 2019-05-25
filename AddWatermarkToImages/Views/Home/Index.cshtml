@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div class="row">
+            <div class="form-group col-md-5">
+                <span>Enter Watermark</span>
+                <input type="text" class="form-control" required name="text" />
+            </div>
+            <div class="form-group col-md-5">
+                <span>Select File:</span>
+                <input type="file" class="form-control" required name="postedFile" />
+            </div>
+        </div>
+        <input type="submit" class="btn btn-info" value="Upload" />
+    }
+</div>
